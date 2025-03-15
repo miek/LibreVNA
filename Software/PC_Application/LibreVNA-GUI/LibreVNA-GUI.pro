@@ -19,6 +19,7 @@ HEADERS += \
     CustomWidgets/toggleswitch.h \
     CustomWidgets/touchstoneimport.h \
     CustomWidgets/tracesetselector.h \
+    Device/HP87xx/hp87xxdriver.h \
     Device/LibreVNA/Compound/compounddevice.h \
     Device/LibreVNA/Compound/compounddeviceeditdialog.h \
     Device/LibreVNA/Compound/compounddriver.h \
@@ -184,6 +185,7 @@ SOURCES += \
     CustomWidgets/toggleswitch.cpp \
     CustomWidgets/touchstoneimport.cpp \
     CustomWidgets/tracesetselector.cpp \
+    Device/HP87xx/hp87xxdriver.cpp \
     Device/LibreVNA/Compound/compounddevice.cpp \
     Device/LibreVNA/Compound/compounddeviceeditdialog.cpp \
     Device/LibreVNA/Compound/compounddriver.cpp \

@@ -3,6 +3,7 @@
 #include "LibreVNA/librevnatcpdriver.h"
 #include "LibreVNA/librevnausbdriver.h"
 #include "LibreVNA/Compound/compounddriver.h"
+#include "HP87xx/hp87xxdriver.h"
 #include "SSA3000X/ssa3000xdriver.h"
 #include "SNA5000A/sna5000adriver.h"
 
@@ -23,6 +24,7 @@ std::vector<DeviceDriver *> DeviceDriver::getDrivers()
         ret.push_back(new LibreVNAUSBDriver);
         ret.push_back(new LibreVNATCPDriver);
         ret.push_back(new CompoundDriver);
+        ret.push_back(new HP87xxDriver);
         ret.push_back(new SSA3000XDriver);
         ret.push_back(new SNA5000ADriver);
     }
