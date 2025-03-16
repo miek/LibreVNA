@@ -1292,6 +1292,14 @@ void VNA::SetPoints(unsigned int points)
     } else if (points < 2) {
         points = 2;
     }
+    if (!DeviceDriver::getInfo(window->getDevice()).Limits.VNA.arbitaryPointsValues) {
+        for (auto v : DeviceDriver::getInfo(window->getDevice()).Limits.VNA.validPointsValues) {
+            if (v >= points) {
+                points = v;
+                break;
+            }
+        }
+    }
     if (points > DeviceDriver::getInfo(window->getDevice()).Limits.VNA.maxPoints) {
         // needs segmented sweep
         settings.segments = ceil((double) points / DeviceDriver::getInfo(window->getDevice()).Limits.VNA.maxPoints);

@@ -100,6 +100,10 @@ public:
                 double minIFBW, maxIFBW;
                 // Maximum number of points per sweep
                 unsigned int maxPoints;
+                // Are arbitary points values supported
+                bool arbitaryPointsValues;
+                // List of valid points if arbitary values aren't supported
+                std::vector<int> validPointsValues;
                 // Stimulus level limits in dBm
                 double mindBm, maxdBm;
                 // dwell time limit
